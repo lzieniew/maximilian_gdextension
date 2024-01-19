@@ -1,8 +1,7 @@
 #include "gdexample.h"
+#include <godot_cpp/classes/engine.hpp>
 #include <godot_cpp/core/class_db.hpp>
 #include <godot_cpp/variant/utility_functions.hpp>
-
-#include "maximilian.h"
 
 using namespace godot;
 
@@ -12,20 +11,29 @@ void GDExample::_bind_methods() {}
 
 GDExample::GDExample() {
   // Initialize any variables here.
-  time_passed = 0.0;
+  if (Engine::get_singleton()->is_editor_hint())
+    set_process_mode(Node::ProcessMode::PROCESS_MODE_DISABLED);
 }
 
 GDExample::~GDExample() {
   // Add your cleanup here.
 }
 
-void GDExample::_process(double delta) {
-  time_passed += delta;
+void GDExample::_ready() {
+  play();
+  playback = get_stream_playback();
+}
 
-  Vector2 new_position = Vector2(10.0 + (10.0 * sin(time_passed * 2.0)),
-                                 10.0 + (10.0 * cos(time_passed * 1.5)));
+void GDExample::_process(double delta) { fill_buffer(); }
 
-  set_position(new_position);
-  auto sine = mySine.sinewave(440);
-  UtilityFunctions::print(sine);
+void GDExample::fill_buffer() {
+  double phase = 0.0;
+  double increment = pulse_hz / sample_hz;
+  int frames_available = playback->get_frames_available();
+
+  for (int i = 0; i < frames_available; i++) {
+    float value = mySine.sinewave(240);
+    playback->push_frame(Vector2(value, value));
+    phase = fmod(phase + increment, 1.0);
+  }
 }

@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkyegf143ktl4"]
+[gd_scene load_steps=3 format=3 uid="uid://dkyegf143ktl4"]
 
-[ext_resource type="Texture2D" uid="uid://d32f2iot8ifjh" path="res://icon.svg" id="1_88dka"]
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_oxmxe"]
+
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_ppcrx"]
 
 [node name="Main" type="Node"]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamGenerator_oxmxe")
+
 [node name="GDExample" type="GDExample" parent="."]
-position = Vector2(12.4507, 1.74499)
-texture = ExtResource("1_88dka")
+stream = SubResource("AudioStreamGenerator_ppcrx")
