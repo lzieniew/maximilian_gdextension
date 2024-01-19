@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classmaxiPoll" kind="class" language="C++" prot="public">
+    <compoundname>maxiPoll</compoundname>
+    <includes refid="maximilian_8h" local="no">maximilian.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmaxiPoll_1a0fe8a5a2b3755bf37d18308400784034" prot="private" static="no" mutable="no">
+        <type><ref refid="classmaxiOsc" kindref="compound">maxiOsc</ref></type>
+        <definition>maxiOsc maxiPoll::imp</definition>
+        <argsstring></argsstring>
+        <name>imp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ck84/src/Maximilian/src/maximilian.h" line="2568" column="17" bodyfile="/home/ck84/src/Maximilian/src/maximilian.h" bodystart="2568" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmaxiPoll_1abe2c3769f3082edf25aba08690c144b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>maxiPoll::maxiPoll</definition>
+        <argsstring>()</argsstring>
+        <name>maxiPoll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ck84/src/Maximilian/src/maximilian.h" line="2551" column="9" bodyfile="/home/ck84/src/Maximilian/src/maximilian.cpp" bodystart="1527" bodyend="1527"/>
+      </memberdef>
+      <memberdef kind="function" id="classmaxiPoll_1a7e72b3804fef19771d40c2bb90b37ba8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double maxiPoll::poll</definition>
+        <argsstring>(double val, double frequency=4, string txt=&quot;&quot;, string end=&quot;\n&quot;)</argsstring>
+        <name>poll</name>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>frequency</declname>
+          <defval>4</defval>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>txt</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>end</declname>
+          <defval>&quot;\n&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to poll </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>How often to print this value (Hz) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>txt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional text to br printed before the value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the value being polled, so this can used as a pass-through function e.g. filter.play(obj.poll(osc.saw(2)),0.5) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ck84/src/Maximilian/src/maximilian.h" line="2558" column="16" bodyfile="/home/ck84/src/Maximilian/src/maximilian.h" bodystart="2558" bodyend="2566"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Poll values to stdout at regular intervals </para>
+    </detaileddescription>
+    <location file="/home/ck84/src/Maximilian/src/maximilian.h" line="2549" column="1" bodyfile="/home/ck84/src/Maximilian/src/maximilian.h" bodystart="2549" bodyend="2569"/>
+    <listofallmembers>
+      <member refid="classmaxiPoll_1a0fe8a5a2b3755bf37d18308400784034" prot="private" virt="non-virtual"><scope>maxiPoll</scope><name>imp</name></member>
+      <member refid="classmaxiPoll_1abe2c3769f3082edf25aba08690c144b5" prot="public" virt="non-virtual"><scope>maxiPoll</scope><name>maxiPoll</name></member>
+      <member refid="classmaxiPoll_1a7e72b3804fef19771d40c2bb90b37ba8" prot="public" virt="non-virtual"><scope>maxiPoll</scope><name>poll</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

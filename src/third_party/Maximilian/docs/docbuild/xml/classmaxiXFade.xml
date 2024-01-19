@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classmaxiXFade" kind="class" language="C++" prot="public">
+    <compoundname>maxiXFade</compoundname>
+    <includes refid="maximilian_8h" local="no">maximilian.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmaxiXFade_1afe3be162897f4ac47ede778ccb937f22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>maxiXFade::maxiXFade</definition>
+        <argsstring>()</argsstring>
+        <name>maxiXFade</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ck84/src/Maximilian/src/maximilian.h" line="1492" column="5" bodyfile="/home/ck84/src/Maximilian/src/maximilian.h" bodystart="1492" bodyend="1492"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmaxiXFade_1ac7c6c4025e0d5205dcb5fd68e58fe465" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>static vector&lt;double&gt; maxiXFade::xfade</definition>
+        <argsstring>(vector&lt; double &gt; &amp;ch1, vector&lt; double &gt; &amp;ch2, double xfader)</argsstring>
+        <name>xfade</name>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>ch1</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>ch2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xfader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cross-fade between stereo signals <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ch1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a vector containing left and right components of channel 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ch2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a vector containing left and right components of channel 2 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xfader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the cross-fader position, -1=100% ch1, 1=100% ch2, 0=an equal mix of both channels </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ck84/src/Maximilian/src/maximilian.h" line="1500" column="19" bodyfile="/home/ck84/src/Maximilian/src/maximilian.h" bodystart="1500" bodyend="1512"/>
+      </memberdef>
+      <memberdef kind="function" id="classmaxiXFade_1a67205bfeb70b1bd1419b72a2ee451ab5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double maxiXFade::xfade</definition>
+        <argsstring>(double ch1, double ch2, double xfader)</argsstring>
+        <name>xfade</name>
+        <param>
+          <type>double</type>
+          <declname>ch1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ch2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xfader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cross-fade between mono signals <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ch1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the signal for channel 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ch2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the signal for channel 2 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xfader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the cross-fader position, -1=100% ch1, 1=100% ch2, 0=an equal mix of both channels </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ck84/src/Maximilian/src/maximilian.h" line="1519" column="19" bodyfile="/home/ck84/src/Maximilian/src/maximilian.h" bodystart="1519" bodyend="1524"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Cross-fade between two signals, using equal-power panning </para>
+    </detaileddescription>
+    <location file="/home/ck84/src/Maximilian/src/maximilian.h" line="1489" column="1" bodyfile="/home/ck84/src/Maximilian/src/maximilian.h" bodystart="1490" bodyend="1525"/>
+    <listofallmembers>
+      <member refid="classmaxiXFade_1afe3be162897f4ac47ede778ccb937f22" prot="public" virt="non-virtual"><scope>maxiXFade</scope><name>maxiXFade</name></member>
+      <member refid="classmaxiXFade_1ac7c6c4025e0d5205dcb5fd68e58fe465" prot="public" virt="non-virtual"><scope>maxiXFade</scope><name>xfade</name></member>
+      <member refid="classmaxiXFade_1a67205bfeb70b1bd1419b72a2ee451ab5" prot="public" virt="non-virtual"><scope>maxiXFade</scope><name>xfade</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

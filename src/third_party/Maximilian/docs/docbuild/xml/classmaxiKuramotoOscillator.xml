@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classmaxiKuramotoOscillator" kind="class" language="C++" prot="public">
+    <compoundname>maxiKuramotoOscillator</compoundname>
+    <includes refid="maximilian_8h" local="no">maximilian.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmaxiKuramotoOscillator_1a0073eb857963ae46a31e59530a82ef30" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double maxiKuramotoOscillator::phase</definition>
+        <argsstring></argsstring>
+        <name>phase</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ck84/src/Maximilian/src/maximilian.h" line="1659" column="12" bodyfile="/home/ck84/src/Maximilian/src/maximilian.h" bodystart="1659" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmaxiKuramotoOscillator_1a0dab55da56fb508b02918194a27c1b53" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double maxiKuramotoOscillator::dt</definition>
+        <argsstring></argsstring>
+        <name>dt</name>
+        <initializer>= TWOPI / <ref refid="classmaxiSettings_1a69a0a3a7202358b401f8c75b0d711421" kindref="member">maxiSettings::sampleRate</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ck84/src/Maximilian/src/maximilian.h" line="1660" column="12" bodyfile="/home/ck84/src/Maximilian/src/maximilian.h" bodystart="1660" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmaxiKuramotoOscillator_1aebdc91c2cba8ac79138a4307976c7dcf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>maxiKuramotoOscillator::maxiKuramotoOscillator</definition>
+        <argsstring>()</argsstring>
+        <name>maxiKuramotoOscillator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ck84/src/Maximilian/src/maximilian.h" line="1629" column="5" bodyfile="/home/ck84/src/Maximilian/src/maximilian.h" bodystart="1629" bodyend="1629"/>
+      </memberdef>
+      <memberdef kind="function" id="classmaxiKuramotoOscillator_1aaa1c665afa490b2cd45b116a23cd4ee5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double maxiKuramotoOscillator::play</definition>
+        <argsstring>(double freq, double K, std::vector&lt; double &gt; phases)</argsstring>
+        <name>play</name>
+        <param>
+          <type>double</type>
+          <declname>freq</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>K</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>phases</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Run the oscillator <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the intended frequency of the oscillator </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>K</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the strengh of coupling between oscillators </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phases</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a vector of the phases of other kuramoto oscillators </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the current amplitude of the oscillator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ck84/src/Maximilian/src/maximilian.h" line="1638" column="19" bodyfile="/home/ck84/src/Maximilian/src/maximilian.h" bodystart="1638" bodyend="1652"/>
+      </memberdef>
+      <memberdef kind="function" id="classmaxiKuramotoOscillator_1a6e06188b46a440a5783291d2f0dc33b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void maxiKuramotoOscillator::setPhase</definition>
+        <argsstring>(double newPhase)</argsstring>
+        <name>setPhase</name>
+        <param>
+          <type>double</type>
+          <declname>newPhase</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the phase of the oscillator<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newPhase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the phase, 0 - 2PI </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ck84/src/Maximilian/src/maximilian.h" line="1654" column="17" bodyfile="/home/ck84/src/Maximilian/src/maximilian.h" bodystart="1654" bodyend="1654"/>
+      </memberdef>
+      <memberdef kind="function" id="classmaxiKuramotoOscillator_1af977c10b9b34a677d17d82b3ae432791" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double maxiKuramotoOscillator::getPhase</definition>
+        <argsstring>()</argsstring>
+        <name>getPhase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the current phase of the oscillator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ck84/src/Maximilian/src/maximilian.h" line="1656" column="19" bodyfile="/home/ck84/src/Maximilian/src/maximilian.h" bodystart="1656" bodyend="1656"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classA" kindref="compound">A</ref> kuramoto oscillator</para>
+<para><ref refid="classThis" kindref="compound">This</ref> is an adaptive oscillator that adjusts its own phase in relation to the phases of other kuramoto oscillators</para>
+<para>For further info, see <ulink url="https://tutorials.siam.org/dsweb/cotutorial/index.php?s=3&amp;p=0">https://tutorials.siam.org/dsweb/cotutorial/index.php?s=3&amp;p=0</ulink> <ulink url="https://www.complexity-explorables.org/explorables/ride-my-kuramotocycle/">https://www.complexity-explorables.org/explorables/ride-my-kuramotocycle/</ulink> </para>
+    </detaileddescription>
+    <location file="/home/ck84/src/Maximilian/src/maximilian.h" line="1626" column="1" bodyfile="/home/ck84/src/Maximilian/src/maximilian.h" bodystart="1627" bodyend="1661"/>
+    <listofallmembers>
+      <member refid="classmaxiKuramotoOscillator_1a0dab55da56fb508b02918194a27c1b53" prot="private" virt="non-virtual"><scope>maxiKuramotoOscillator</scope><name>dt</name></member>
+      <member refid="classmaxiKuramotoOscillator_1af977c10b9b34a677d17d82b3ae432791" prot="public" virt="non-virtual"><scope>maxiKuramotoOscillator</scope><name>getPhase</name></member>
+      <member refid="classmaxiKuramotoOscillator_1aebdc91c2cba8ac79138a4307976c7dcf" prot="public" virt="non-virtual"><scope>maxiKuramotoOscillator</scope><name>maxiKuramotoOscillator</name></member>
+      <member refid="classmaxiKuramotoOscillator_1a0073eb857963ae46a31e59530a82ef30" prot="private" virt="non-virtual"><scope>maxiKuramotoOscillator</scope><name>phase</name></member>
+      <member refid="classmaxiKuramotoOscillator_1aaa1c665afa490b2cd45b116a23cd4ee5" prot="public" virt="non-virtual"><scope>maxiKuramotoOscillator</scope><name>play</name></member>
+      <member refid="classmaxiKuramotoOscillator_1a6e06188b46a440a5783291d2f0dc33b6" prot="public" virt="non-virtual"><scope>maxiKuramotoOscillator</scope><name>setPhase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
