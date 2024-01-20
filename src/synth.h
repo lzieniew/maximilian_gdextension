@@ -1,7 +1,6 @@
-#ifndef GDEXAMPLE_H
-#define GDEXAMPLE_H
+#ifndef SYNTH_H
+#define SYNTH_H
 
-#include <godot_cpp/classes/audio_stream.hpp>
 #include <godot_cpp/classes/audio_stream_generator.hpp>
 #include <godot_cpp/classes/audio_stream_generator_playback.hpp>
 #include <godot_cpp/classes/audio_stream_player.hpp>
@@ -11,21 +10,20 @@
 
 namespace godot {
 
-class GDExample : public AudioStreamPlayer {
-  GDCLASS(GDExample, AudioStreamPlayer)
+class Synth : public AudioStreamPlayer {
+  GDCLASS(Synth, AudioStreamPlayer)
 
 private:
   Ref<AudioStreamGeneratorPlayback> playback;
-  double sample_hz;        // Sample rate
-  double pulse_hz = 150.0; // Frequency of the sound wave
+  double pulse_hz = 100.0; // Frequency of the sound wave
   maxiOsc mySine;
 
 protected:
   static void _bind_methods();
 
 public:
-  GDExample();
-  ~GDExample();
+  Synth();
+  ~Synth();
 
   void _ready() override;
   void _process(double delta) override;

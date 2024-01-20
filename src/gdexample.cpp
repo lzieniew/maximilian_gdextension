@@ -5,7 +5,7 @@
 
 using namespace godot;
 
-maxiOsc mySine, myOtherSine;
+maxiOsc mySineOther;
 
 void GDExample::_bind_methods() {}
 
@@ -22,19 +22,20 @@ GDExample::~GDExample() {
 void GDExample::_ready() {
   play();
   playback = get_stream_playback();
+  // sample_hz = get_stream()->get_mix_rate();
+  sample_hz =
+      Object::cast_to<AudioStreamGenerator>(*get_stream())->get_mix_rate();
 }
 
 void GDExample::_process(double delta) { fill_buffer(); }
 
 void GDExample::fill_buffer() {
-  double phase = 0.0;
   double increment = pulse_hz / sample_hz;
   int frames_available = playback->get_frames_available();
 
   for (int i = 0; i < frames_available; i++) {
-    // float value = mySine.sinewave(240);
-    float value = mySine.sinewave(140) + myOtherSine.sinewave(141);
+    // float value = mySineOther.sinewave(240);
+    float value = mySineOther.sinewave(pulse_hz);
     playback->push_frame(Vector2(value, value));
-    phase = fmod(phase + increment, 1.0);
   }
 }

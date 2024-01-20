@@ -1,13 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkyegf143ktl4"]
+[gd_scene load_steps=2 format=3 uid="uid://dkyegf143ktl4"]
 
-[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_oxmxe"]
-
-[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_ppcrx"]
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_dh0vf"]
 
 [node name="Main" type="Node"]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamGenerator_oxmxe")
-
-[node name="GDExample" type="GDExample" parent="."]
-stream = SubResource("AudioStreamGenerator_ppcrx")
+[node name="Synth" type="Synth" parent="."]
+stream = SubResource("AudioStreamGenerator_dh0vf")
+volume_db = 0.937
+max_polyphony = 10
+bus = &"synth2"
