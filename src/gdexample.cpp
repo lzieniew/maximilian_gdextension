@@ -5,7 +5,7 @@
 
 using namespace godot;
 
-maxiOsc mySine;
+maxiOsc mySine, myOtherSine;
 
 void GDExample::_bind_methods() {}
 
@@ -32,7 +32,8 @@ void GDExample::fill_buffer() {
   int frames_available = playback->get_frames_available();
 
   for (int i = 0; i < frames_available; i++) {
-    float value = mySine.sinewave(240);
+    // float value = mySine.sinewave(240);
+    float value = mySine.sinewave(140) + myOtherSine.sinewave(141);
     playback->push_frame(Vector2(value, value));
     phase = fmod(phase + increment, 1.0);
   }
